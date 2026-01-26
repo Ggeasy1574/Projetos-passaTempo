@@ -16,7 +16,8 @@ public class Main {
                 new InputLogic();
             }
             else{
-                break;
+                System.out.println("See you later 0w0");
+                running = false;
             }
         }
     }

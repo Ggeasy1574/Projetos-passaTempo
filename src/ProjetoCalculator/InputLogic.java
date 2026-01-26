@@ -14,9 +14,6 @@ public class InputLogic {
         return Double.parseDouble(number1) * Double.parseDouble(number2);
     }
     private static double division(String  number1,String  number2){
-        if(number2.equals("0")){
-            number2 = "1";
-        }
         return Double.parseDouble(number1) / Double.parseDouble(number2);
     }
 
@@ -38,11 +35,24 @@ public class InputLogic {
                 """);
         byte option = sc.nextByte();
         switch (option){
-            case 1 -> System.out.println(sum(number1, number2));
-            case 2 -> System.out.println(difference(number1, number2));
-            case 3 -> System.out.println(multiply(number1, number2));
-            case 4 -> System.out.println(division(number1, number2));
-            default -> throw new IllegalStateException("invalid option: " + option);
+            case 1 :
+                System.out.println(sum(number1, number2));
+                break;
+            case 2 :
+                System.out.println(difference(number1, number2));
+                break;
+            case 3:
+                System.out.println(multiply(number1, number2));
+                break;
+            case 4 :
+                if(number2.equals("0")) {
+                    System.out.println("Divisão por 0");
+                } else {
+                    System.out.println(division(number1, number2));
+                }
+                break;
+            default:
+                throw new IllegalStateException("invalid option: " + option);
         }
     }
 }
