@@ -1,4 +1,4 @@
-import ProjetoCalculator.InputLogic;
+import ProjetoCalculator.InputLogic.InputLogic;
 
 import java.util.Scanner;
 
